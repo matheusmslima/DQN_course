@@ -49,10 +49,20 @@ class Dqn():
         self.reward_window = []
         self.model = Network(input_size, nb_action)
         self.memory = ReplayMemory(100000)
+        # RMSProp
         self.optimizer = optim.Adam(self.model.parameter(), lr = 0.001)
         self.last_state = torch.Tensor(input_size).unsqueeze(0)
         self.last_action = 0
         self.last_reward = 0
+    
+    def select_action(self, state):
+        probs = F.softmax(self.model(Variable(state, volatile = True)) * 7)
+        
+
+
+
+
+
 
 
 
