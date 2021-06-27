@@ -94,7 +94,6 @@ class Ball3(Widget): # sensor 3 (veja kivy https://kivy.org/docs/tutorials/pong.
 
 # Criação da classe para "jogar" (para "ObjectProperty" veja kivy https://kivy.org/docs/tutorials/pong.html)
 class Game(Widget):
-
     car = ObjectProperty(None) # busca o objeto carro do arquivo kivy
     ball1 = ObjectProperty(None) # busca o objeto sensor 1 do arquivo kivy
     ball2 = ObjectProperty(None) # busca o objeto sensor 2 do arquivo kivy
